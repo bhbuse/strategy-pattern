@@ -8,12 +8,12 @@ public class Aplicacao {
 		var contexto = new Contexto();
 
 		while (true) {
-			int a = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o 1o n�mero:"));
-			int b = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o 2o n�mero:"));
+			int a = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o 1o número:"));
+			int b = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o 2o número:"));
 
-			var acao = JOptionPane.showInputDialog(null, "Selecione a a��o (+, -, *, /, -1)");
+			var acao = JOptionPane.showInputDialog(null, "Selecione a ação (+, -, *, /, -1)");
 
-			// 1 define estrat�gia de execu��o
+			// 1 define estratégia de execução
 			switch (acao) {
 				case "+":
 					contexto.setEstrategia(new Soma());
@@ -32,7 +32,7 @@ public class Aplicacao {
 					break;
 			}
 
-			// executa estrat�gia definida
+			// executa estratégia definida
 			try {
 				var resultado = contexto.executar(a, b);
 				System.out.println("Resultado: " + resultado);
